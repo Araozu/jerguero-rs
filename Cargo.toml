@@ -1,0 +1,11 @@
+[package]
+name = "jerguero"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+maud = { version = "0.26.0", features = ["rocket"] }
+rocket = "0.5.0"
+sqlx = { version = "0.7.3", features = ["postgres"] }

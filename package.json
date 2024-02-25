@@ -1,0 +1,17 @@
+{
+  "name": "jerguero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./static/tailwind.css -o ./static/out.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "daisyui": "^4.6.1",
+    "tailwindcss": "^3.4.1"
+  }
+}
