@@ -4,7 +4,6 @@ extern crate rocket;
 mod controller;
 mod view;
 
-use maud::{html, Markup};
 use rocket::fs::{relative, FileServer};
 
 #[launch]

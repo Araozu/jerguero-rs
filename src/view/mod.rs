@@ -12,7 +12,7 @@ pub fn skeleton(body: Markup) -> Markup {
                 link rel="stylesheet"
                     type="text/css"
                     href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css";
-                // Google fonts: Playfair Display and Inter
+                // Google fonts: Playfair Display
                 link rel="preconnect" href="https://fonts.googleapis.com";
                 link rel="preconnect" href="https://fonts.gstatic.com" crossorigin;
                 link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet";
@@ -58,6 +58,7 @@ pub fn homepage() -> Markup {
             (post())
             (post())
             (post())
+            div class="w-full h-16" {}
         }
     })
 }
@@ -66,19 +67,37 @@ fn post() -> Markup {
     html! {
         article class="card card-compact shadow-md my-2 border border-[rgba(150,150,150,0.25)]" {
             div class="card-body" {
-                a href="#" class="text-blue-600 font-serif font-black" {
-                    h2 class="card-title" {
-                        "Take the L"
+                div class="grid grid-cols-[auto_4rem]" {
+                    a href="#" class="text-blue-600 font-serif font-black hover:underline" {
+                        h2 class="card-title" {
+                            "Pololo/a "
+                        }
+                    }
+                    div class="inline-block text-right text-xl" { 
+                        span title="Controversial" {"🔥"}
+                        " "
+                        span title="Utilizado en Chile" {"🇨🇱"}
                     }
                 }
+                div {
+                    div class="badge badge-ghost text-xs hover:bg-neutral hover:text-neutral-content cursor-pointer" {"Amor"}
+                    div class="badge badge-ghost text-xs hover:bg-neutral hover:text-neutral-content cursor-pointer" {"Relaciones"}
+                }
                 p {
-                    "Stands for \"Take the loss\". Frequently used to describe flunking a test, being dumped, being stood up, being beaten up or robbed, or losing one's money in the stock market, gambling, or through exploitative business schemes."
+                    "Otra palabra para decir enamorado/a"
                 }
                 br;
-                div class="opacity-80 text-sm" {
-                    a href="#" class="inline-block underline font-serif font-semibold" { "Pablito" }
-                    " · "
-                    span { "05/12/2022" }
+                div class="grid grid-cols-[auto_3.25rem]" {
+                    div class="opacity-70 text-xs" {
+                        a href="#" class="inline-block underline font-serif font-semibold" { "Pablito" }
+                        " · "
+                        span { "05/12/2022" }
+                    }
+                    div class="text-lg text-right" {
+                        i class="ph ph-thumbs-down hover:underline cursor-pointer" {}
+                        " "
+                        i class="ph ph-thumbs-up hover:underline cursor-pointer" {}
+                    }
                 }
             }
         }
