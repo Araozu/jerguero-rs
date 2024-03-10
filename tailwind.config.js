@@ -4,10 +4,39 @@ module.exports = {
         "./src/**/*.{rs,html}",
         "./static/**/*.html",
     ],
-    theme: {
-        extend: {},
+    corePlugins: {
+        container: false
     },
-    plugins: [require("daisyui")],
+    theme: {
+        extend: {
+            fontFamily: {
+                'serif': ["'Playfair Display'", "serif"],
+            }
+        },
+    },
+    plugins: [
+        require("daisyui"),
+        function ({ addComponents }) {
+            addComponents({
+                '.container': {
+                    maxWidth: '95%',
+                    margin: "auto",
+                    '@screen sm': {
+                        maxWidth: '640px',
+                    },
+                    '@screen md': {
+                        maxWidth: '768px',
+                    },
+                    '@screen lg': {
+                        maxWidth: '1024px',
+                    },
+                    '@screen xl': {
+                        maxWidth: '1280px',
+                    },
+                }
+            })
+        }
+    ],
     daisyui: {
         themes: [
             "light",
