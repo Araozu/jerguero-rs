@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --c-primary: #0ea5e9;
+
+
+}
+
+:root {
+    --c-bg: white;
+    --c-on-bg: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-bg: #0e1419;
+        --c-on-bg: white;
+    }
+}
+
+html {
+    background-color: var(--c-bg);
+    color: var(--c-on-bg);
+}

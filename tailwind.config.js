@@ -11,11 +11,13 @@ module.exports = {
         extend: {
             fontFamily: {
                 'serif': ["'Playfair Display'", "serif"],
-            }
+            },
+            colors: {
+                "c-primary": "var(--c-primary)"
+            },
         },
     },
     plugins: [
-        require("daisyui"),
         function ({ addComponents }) {
             addComponents({
                 '.container': {

@@ -1,9 +1,14 @@
 use maud::{html, Markup, DOCTYPE};
 
+mod icons;
+
+use icons::{magnifying_glass, bird};
+
+
 pub fn skeleton(body: Markup) -> Markup {
     html! {
         (DOCTYPE)
-        html lang="es" data-theme="cupcake" {
+        html lang="es" {
             head {
                 title { "Jerguero" }
                 meta name="viewport" content="width=device-width, initial-scale=1.0";
@@ -26,20 +31,19 @@ pub fn skeleton(body: Markup) -> Markup {
 
 fn navbar() -> Markup {
     html! {
-        nav class="navbar gap-1 fixed z-50 bottom-0 left-0 w-full border-t border-[rgba(150,150,150,0.5)] bg-base-200 text-base-content" {
-            div class="flex-none" {
-                a class="btn btn-ghost text-xl" {
-                    "J"
+        nav class="grid grid-cols-[3.5rem_auto_3.5rem] bg-c-primary fixed z-50 bottom-0 left-0 w-full h-14" {
+        // nav class="navbar gap-1 fixed z-50 bottom-0 left-0 w-full border-t border-[rgba(150,150,150,0.5)] bg-base-200 text-base-content" {
+            div class="table" {
+                a href="/" class="table-cell align-middle h-14 text-center" {
+                    (bird("var(--c-on-bg)".into(), 36))
                 }
             }
-            div class="flex-1" {   
-                div class="form-control" {
-                    input type="text" placeholder="Search" class="input input-bordered w-full md:w-auto";
-                }
+            div {
+                input type="text" placeholder="Buscá una palabra" class="w-full md:w-auto py-2 px-1 rounded-md my-2";
             }
-            div class="flex-none" {
-                a class="btn btn-ghost text-xl" {
-                    "s"
+            div class="table" {
+                button class="table-cell align-middle h-14 text-center w-full" {
+                    (magnifying_glass("var(--c-on-bg)".into(), 36))
                 }
             }
         }
@@ -73,7 +77,7 @@ fn post() -> Markup {
                             "Pololo/a "
                         }
                     }
-                    div class="inline-block text-right text-xl" { 
+                    div class="inline-block text-right text-xl" {
                         span title="Controversial" {"🔥"}
                         " "
                         span title="Utilizado en Chile" {"🇨🇱"}
