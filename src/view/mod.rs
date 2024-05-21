@@ -38,7 +38,10 @@ fn navbar() -> Markup {
                     (bird("var(--c-on-bg)".into(), 36))
                 }
             }
-            div {
+            div class="relative" {
+                svg class="absolute z-10 -left-[15px] top-[9px] scale-x-50" fill="white" width="20" height="20" viewBox="0 0 50 50" {
+                    path d="M 57.29217,4.9844012 V 56.568575 C 44.512514,39.388798 29.429048,35.264265 12.536889,30.729102 29.111034,27.220159 45.273777,21.221938 57.29217,4.9844012 Z" {}
+                }
                 input type="text" placeholder="Buscá una palabra" class="w-full md:w-auto py-2 px-1 rounded-md my-2";
             }
             div class="table" {
