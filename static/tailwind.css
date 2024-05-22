@@ -9,18 +9,24 @@
 }
 
 :root {
-    --c-bg: white;
+    --c-bg: #ecfeff;
     --c-on-bg: black;
+
+    --c-bg-2: white;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --c-bg: #0e1419;
+        --c-bg: #0a0a0a;
         --c-on-bg: white;
+
+        --c-bg-2: #051c2c;
     }
 }
 
 html {
     background-color: var(--c-bg);
     color: var(--c-on-bg);
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
 }

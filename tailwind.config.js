@@ -10,12 +10,14 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'serif': ["'Playfair Display'", "serif"],
+                'serif': ["serif"],
             },
             colors: {
                 "c-primary": "var(--c-primary)",
                 "c-bg": "var(--c-bg)",
+                "c-bg-2": "var(--c-bg-2)",
                 "c-on-bg": "var(--c-on-bg)",
+                "c-primary": "var(--c-primary)",
             },
         },
     },

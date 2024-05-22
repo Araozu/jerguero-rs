@@ -16,10 +16,10 @@ pub fn skeleton(body: Markup) -> Markup {
                 link rel="stylesheet"
                     type="text/css"
                     href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css";
-                // Google fonts: Playfair Display
+                // Radio Canada Big
                 link rel="preconnect" href="https://fonts.googleapis.com";
                 link rel="preconnect" href="https://fonts.gstatic.com" crossorigin;
-                link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet";
+                link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet";
                 // hyperscript
                 script src="https://unpkg.com/hyperscript.org@0.9.12" defer {}
             }
@@ -41,7 +41,7 @@ fn navbar() -> Markup {
             div class="grid grid-cols-[3.5rem_auto_3.5rem] bg-c-primary" {
                 div class="table" {
                     a href="/" class="table-cell align-middle h-14 text-center" {
-                        (bird("var(--c-on-bg)".into(), 36))
+                        (bird("white".into(), 36))
                     }
                 }
                 div class="relative" {
@@ -59,11 +59,11 @@ fn navbar() -> Markup {
                             "
                         type="text"
                         placeholder="Buscá una palabra"
-                        class="w-full md:w-auto py-2 px-1 rounded-md my-2 bg-white text-black";
+                        class="w-full py-2 px-1 rounded-md my-2 bg-white text-black";
                 }
                 div class="table" {
                     button class="table-cell align-middle h-14 text-center w-full" {
-                        (magnifying_glass("var(--c-on-bg)".into(), 36))
+                        (magnifying_glass("white".into(), 36))
                     }
                 }
             }
@@ -99,12 +99,12 @@ pub fn homepage() -> Markup {
 
 fn post() -> Markup {
     html! {
-        article class="card card-compact shadow-md my-2 border border-[rgba(150,150,150,0.25)]" {
+        article class="bg-c-bg-2 shadow-md my-2 rounded-md py-2 px-4" {
             div class="card-body" {
                 div class="grid grid-cols-[auto_4rem]" {
-                    a href="#" class="text-blue-600 font-serif font-black hover:underline" {
+                    a href="#" class="text-c-primary text-2xl font-black hover:underline pt-2 pb-4" {
                         h2 class="card-title" {
-                            "Pololo/a "
+                            "Pololo"
                         }
                     }
                     div class="inline-block text-right text-xl" {
