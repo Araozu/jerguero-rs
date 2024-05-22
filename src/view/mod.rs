@@ -102,23 +102,21 @@ fn post() -> Markup {
         article class="bg-c-bg-2 shadow-md my-2 rounded-md py-2 px-4" {
             div class="card-body" {
                 div class="grid grid-cols-[auto_4rem]" {
-                    a href="#" class="text-c-primary text-2xl font-black hover:underline pt-2 pb-4" {
+                    a href="#" class="text-c-primary text-2xl font-black hover:underline pt-2 pb-2" {
                         h2 class="card-title" {
-                            "Pololo"
+                            "Pedro pedro pedro"
                         }
                     }
-                    div class="inline-block text-right text-xl" {
-                        span title="Controversial" {"🔥"}
-                        " "
-                        span title="Utilizado en Chile" {"🇨🇱"}
+                    div class="flex justify-end items-center text-right text-xl" {
+                        span title="Utilizado en Argentina" {"🇦🇷"}
                     }
                 }
-                div {
-                    div class="badge badge-ghost text-xs hover:bg-neutral hover:text-neutral-content cursor-pointer" {"Amor"}
-                    div class="badge badge-ghost text-xs hover:bg-neutral hover:text-neutral-content cursor-pointer" {"Relaciones"}
+                div class="pb-2" {
+                    (badge("Amor".into()))
+                    (badge("Relaciones".into()))
                 }
                 p {
-                    "Otra palabra para decir enamorado/a"
+                    "Pedro pe"
                 }
                 br;
                 div class="grid grid-cols-[auto_3.25rem]" {
@@ -134,6 +132,14 @@ fn post() -> Markup {
                     }
                 }
             }
+        }
+    }
+}
+
+pub fn badge(text: String) -> Markup {
+    html! {
+        button class="inline-block mr-2 py-1 px-2 text-xs rounded-full hover:underline bg-[#082f49] cursor-pointer" {
+            (text)
         }
     }
 }
