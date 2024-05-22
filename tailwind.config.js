@@ -13,7 +13,9 @@ module.exports = {
                 'serif': ["'Playfair Display'", "serif"],
             },
             colors: {
-                "c-primary": "var(--c-primary)"
+                "c-primary": "var(--c-primary)",
+                "c-bg": "var(--c-bg)",
+                "c-on-bg": "var(--c-on-bg)",
             },
         },
     },
